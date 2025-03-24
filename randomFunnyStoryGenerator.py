@@ -1,5 +1,6 @@
 import random
 
+# Data lists
 characters = [
     "a sleep-deprived software engineer", 
     "a bug-hunting developer", 
@@ -8,6 +9,7 @@ characters = [
     "a frustrated QA tester", 
     "a Stack Overflow copy-paste expert"
 ]
+
 settings = [
     "a production server at 2 AM", 
     "a hackathon with zero sleep", 
@@ -16,13 +18,14 @@ settings = [
     "a client call explaining 'simple' changes", 
     "a project deadline that was due yesterday"
 ]
+
 twists = [
-    "accidentally deletes the production database", 
-    "fixes one bug but introduces five more", 
-    "writes code that works… but doesn’t know why", 
-    "spends 4 hours debugging, only to realize it's a typo", 
-    "forgets a semicolon and crashes the whole system", 
-    "says 'it works on my machine' and breaks everything"
+    "accidentally deleted the production database", 
+    "fixed one bug but introduced five more", 
+    "wrote code that works… but doesn’t know why", 
+    "spent 4 hours debugging, only to realize it was a typo", 
+    "forgot a semicolon and crashed the whole system", 
+    "said 'it works on my machine' and broke everything"
 ]
 
 objects = [
@@ -36,7 +39,15 @@ objects = [
 
 moods = ["chaotic", "hilarious", "painfully relatable", "absurd", "nerdy", "a total disaster"]
 
-# generating random story 
+def generate_story():
+    """Generates a random programmer-themed story."""
+    mood = random.choice(moods)
+    character = random.choice(characters)
+    setting = random.choice(settings)
+    twist = random.choice(twists)
+    obj = random.choice(objects)
+    
+    return f"In a {mood} turn of events, {character} was in {setting} when they {twist} using {obj}."
 
-print(f'In a mood {random.choice(moods)} turn of events, {random.choice(characters)} was in {random.choice(settings)} when they {random.choice(twists)} using {random.choice(objects)}') 
-
+# Generate and print the story
+print(generate_story())
