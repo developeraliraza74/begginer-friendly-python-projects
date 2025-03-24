@@ -34,7 +34,7 @@ def determine_winner(user_selection): # determine winners based on conditions
                 
         elif(user_selection == ROCK and computer_selection == SCISSORS or
             user_selection == SCISSORS and computer_selection == PAPER or
-            user_selection == 'p' and computer_selection == ROCK):
+            user_selection == PAPER and computer_selection == ROCK):
 
             print("You win")
 
