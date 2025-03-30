@@ -11,7 +11,7 @@ emojis = {ROCK : "", PAPER : "", SCISSORS : ""}
 
 
 choices = tuple(emojis.keys()) # tuple for selection
-
+# computer_selection
 computer_selection = random.choice(choices) # computer have a choice to select one of the among
 
 def get_user_selection(): # to get user selection
